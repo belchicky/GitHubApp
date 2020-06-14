@@ -24,10 +24,8 @@ final class LoginViewController: UIViewController {
     @IBAction func pressLoginButton(_ sender: Any) {
              let vc = SearchViewController()
          self.navigationController?.pushViewController(vc, animated: true)
-             print("Login button pressed")
     }
-    
-    // Скрытие клавиатуры по тапу за пределами Text View
+
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         self.view.endEditing(true)

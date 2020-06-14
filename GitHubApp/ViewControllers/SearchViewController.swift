@@ -8,6 +8,7 @@
 import UIKit
 import Kingfisher
 
+
 class SearchViewController: UIViewController {
     
     var helloLabel = UILabel()
@@ -17,17 +18,18 @@ class SearchViewController: UIViewController {
     var language = UITextField()
     var segment = UISegmentedControl(items: ["ascended", "descended"])
     var startButton = UIButton()
+    let sharedSession = URLSession.shared
     
-    private let headers = ["Accept" : "application/vnd.github.mercy-preview+json"]
-    private let scheme = "https"
-    private let host = "api.github.com"
-    private let hostPath = "https://api.github.com"
-    private let searchRepoPath = "/search/repositories"
+    let headers = ["Accept" : "application/vnd.github.mercy-preview+json"]
+    let scheme = "https"
+    let host = "api.github.com"
+    let hostPath = "https://api.github.com"
+    let searchRepoPath = "/search/repositories"
     
     var avatarURL: String!
     var username: String!
     
-    private let defaultHeaders = [
+    let defaultHeaders = [
         "Content-Type" : "application/json",
         "Accept" : "application/vnd.github.v3+json"
     ]
@@ -98,7 +100,6 @@ class SearchViewController: UIViewController {
             switch result {
                 
             case .success(let repositories):
-                print(repositories)
                 DispatchQueue.main.async {
                     let nextVC = TableViewController()
                     nextVC.modalPresentationStyle = .overFullScreen
@@ -151,80 +152,5 @@ class SearchViewController: UIViewController {
         startButton.centerXAnchor.constraint(equalTo: repName.centerXAnchor).isActive = true
         startButton.topAnchor.constraint(equalTo: segment.bottomAnchor, constant: 20.0).isActive = true
     }
-
-    func searchRepositoriesRequest() -> URLRequest? {
-        var urlComponents = URLComponents()
-        urlComponents.scheme = scheme
-        urlComponents.host = host
-        urlComponents.path = searchRepoPath
-        
-    var filter = "asc"
-            if segment.selectedSegmentIndex == 1 {
-                filter = "desc"
-            }
-        
-        urlComponents.queryItems = [
-            URLQueryItem(name: "q", value:  repName.text! + "+language:" + language.text!),
-            URLQueryItem(name: "sort", value: "stars"),
-            URLQueryItem(name: "order", value: filter)
-        ]
-
-        guard let url = urlComponents.url else {
-            return nil
-        }
-        print("search request url:\(url)")
-        var request = URLRequest(url: url)
-        request.allHTTPHeaderFields = defaultHeaders
-        return request
-    }
     
-    enum BackendError: Error {
-        case urlError(reason: String)
-        case objectSerialization(reason: String)
-    }
-    
-    enum Result<T> {
-        case success(T)
-        case fail(Error)
-    }
-    
-    let sharedSession = URLSession.shared
-    
-   func getRepositories(completionHandler: @escaping (Result<Repositories>) ->Void) {
-            guard let urlRequest = searchRepositoriesRequest() else {
-                print("url request error")
-                return
-            }
-            
-            let session = URLSession.shared
-            let task = session.dataTask(with: urlRequest, completionHandler: {
-                data, responce, error in
-//
-//                guard error == nil else {
-//                    completionHandler(.fail(error!))
-//                    return
-//                }
-                
-                guard let responceData = data else {
-//                    let error = BackendError.objectSerialization(reason: "No data in responce")
-//                    completionHandler(.fail(error)!)
-                    return
-                }
-                
-                do {
-                    if let json = try JSONSerialization.jsonObject(with: responceData, options: []) as? [String: Any],
-                        let repositories = Repositories(json: json) {
-                        completionHandler(.success(repositories))
-                    } else {
-//                        let error = BackendError.objectSerialization(reason: "Can't create object from JSON")
-//                        completionHandler(.fail(error)!)
-                    }
-                } catch {
-//                    completionHandler(.fail(error)!)
-                    return
-                }
-            })
-            task.resume()
-        }
-        
-    }
+}
