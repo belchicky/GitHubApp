@@ -8,7 +8,6 @@
 
 import UIKit
 import Kingfisher
-import LocalAuthentication
 
 final class LoginViewController: UIViewController {
     
