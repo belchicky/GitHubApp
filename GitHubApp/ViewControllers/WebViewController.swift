@@ -1,5 +1,5 @@
 //
-//  WKwebViewController.swift
+//  WebViewController.swift
 //  GitHubApp
 //
 //  Created by Konstantins Belcickis on 16/06/2020.

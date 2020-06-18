@@ -60,10 +60,10 @@ class SearchViewController: UIViewController {
     
     func searchViewConfiger() {
         
-        userAvatar.kf.setImage(with: URL(string: "https://i.ya-webdesign.com/images/avatar-icon-png-6.png"))
+        userAvatar.kf.setImage(with: URL(string: avatarURL))
         userAvatar.translatesAutoresizingMaskIntoConstraints = false
         
-        helloLabel.text = "Hello"
+        helloLabel.text = "Hello," + username + "!"
         helloLabel.translatesAutoresizingMaskIntoConstraints = false
         helloLabel.textAlignment = .center
         helloLabel.font = helloLabel.font.withSize(19.0)

@@ -9,11 +9,11 @@
 import UIKit
 import Foundation
 
-class TableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource
-{
+class TableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var myTableView: UITableView = UITableView()
     var repositories: Repositories?
+    
     let heightOfHeaderTableView: CGFloat = 300
     let repLabel = UILabel()
     
@@ -43,6 +43,7 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return (repositories?.arrayOfRepositories.count)!
+        
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -58,6 +59,19 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
-
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let urlString = repositories!.arrayOfRepositories[indexPath.row].repositoryURL!
+        
+        DispatchQueue.main.async {
+            let nextVC = WebViewController()
+            nextVC.modalPresentationStyle = .overFullScreen
+            nextVC.urlSting = urlString
+            self.navigationController?.pushViewController(nextVC, animated: true)
+        }
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
 }
 

@@ -11,10 +11,14 @@
 		8103620A249123B70018D1F9 /* Repositories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81036209249123B70018D1F9 /* Repositories.swift */; };
 		8103620C249123D50018D1F9 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8103620B249123D40018D1F9 /* TableViewCell.swift */; };
 		8103620E249123FE0018D1F9 /* TalbeViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8103620D249123FE0018D1F9 /* TalbeViewCell.xib */; };
+		810385752498F69000396F0F /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810385742498F69000396F0F /* WebViewController.swift */; };
 		8117AC1F247AD5EB006650E6 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8117AC1E247AD5EB006650E6 /* Kingfisher.framework */; };
 		8117AC20247AD5EB006650E6 /* Kingfisher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8117AC1E247AD5EB006650E6 /* Kingfisher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8117AC24247ADD2F006650E6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8117AC23247ADD2F006650E6 /* LoginViewController.swift */; };
+		8130BC3E24963F5200D650D2 /* SearchMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8130BC3D24963F5200D650D2 /* SearchMethod.swift */; };
 		81AE4775247D307E00F9D69A /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AE4774247D307E00F9D69A /* SearchViewController.swift */; };
+		81BE3B8F249A31D1008FD223 /* LoginMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BE3B8E249A31D1008FD223 /* LoginMethod.swift */; };
+		81BE3B93249A38D5008FD223 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BE3B92249A38D5008FD223 /* Alert.swift */; };
 		81C2BE8F247AD2DD00DD6092 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C2BE8E247AD2DD00DD6092 /* AppDelegate.swift */; };
 		81C2BE91247AD2DE00DD6092 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C2BE90247AD2DE00DD6092 /* SceneDelegate.swift */; };
 		81C2BE96247AD2DE00DD6092 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81C2BE94247AD2DE00DD6092 /* Main.storyboard */; };
@@ -41,9 +45,13 @@
 		81036209249123B70018D1F9 /* Repositories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repositories.swift; sourceTree = "<group>"; };
 		8103620B249123D40018D1F9 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		8103620D249123FE0018D1F9 /* TalbeViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TalbeViewCell.xib; sourceTree = "<group>"; };
+		810385742498F69000396F0F /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		8117AC1E247AD5EB006650E6 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 		8117AC23247ADD2F006650E6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		8130BC3D24963F5200D650D2 /* SearchMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMethod.swift; sourceTree = "<group>"; };
 		81AE4774247D307E00F9D69A /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		81BE3B8E249A31D1008FD223 /* LoginMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginMethod.swift; sourceTree = "<group>"; };
+		81BE3B92249A38D5008FD223 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		81C2BE8B247AD2DD00DD6092 /* GitHubApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81C2BE8E247AD2DD00DD6092 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81C2BE90247AD2DE00DD6092 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +81,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8130BC3F2496710B00D650D2 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				810385742498F69000396F0F /* WebViewController.swift */,
+				8117AC23247ADD2F006650E6 /* LoginViewController.swift */,
+				81AE4774247D307E00F9D69A /* SearchViewController.swift */,
+				81036207249123960018D1F9 /* TableViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		81C2BE82247AD2DD00DD6092 = {
 			isa = PBXGroup;
 			children = (
@@ -93,12 +112,13 @@
 		81C2BE8D247AD2DD00DD6092 /* GitHubApp */ = {
 			isa = PBXGroup;
 			children = (
-				81C2BE8E247AD2DD00DD6092 /* AppDelegate.swift */,
-				8117AC23247ADD2F006650E6 /* LoginViewController.swift */,
-				81AE4774247D307E00F9D69A /* SearchViewController.swift */,
-				81036207249123960018D1F9 /* TableViewController.swift */,
+				8130BC3F2496710B00D650D2 /* ViewControllers */,
+				8130BC3D24963F5200D650D2 /* SearchMethod.swift */,
+				81BE3B92249A38D5008FD223 /* Alert.swift */,
+				81BE3B8E249A31D1008FD223 /* LoginMethod.swift */,
 				81036209249123B70018D1F9 /* Repositories.swift */,
 				8103620B249123D40018D1F9 /* TableViewCell.swift */,
+				81C2BE8E247AD2DD00DD6092 /* AppDelegate.swift */,
 				81C2BE90247AD2DE00DD6092 /* SceneDelegate.swift */,
 				8103620D249123FE0018D1F9 /* TalbeViewCell.xib */,
 				81C2BE94247AD2DE00DD6092 /* Main.storyboard */,
@@ -207,10 +227,14 @@
 			files = (
 				8117AC24247ADD2F006650E6 /* LoginViewController.swift in Sources */,
 				81C2BE8F247AD2DD00DD6092 /* AppDelegate.swift in Sources */,
+				81BE3B8F249A31D1008FD223 /* LoginMethod.swift in Sources */,
 				81AE4775247D307E00F9D69A /* SearchViewController.swift in Sources */,
 				81036208249123960018D1F9 /* TableViewController.swift in Sources */,
+				8130BC3E24963F5200D650D2 /* SearchMethod.swift in Sources */,
 				81C2BE91247AD2DE00DD6092 /* SceneDelegate.swift in Sources */,
 				8103620C249123D50018D1F9 /* TableViewCell.swift in Sources */,
+				81BE3B93249A38D5008FD223 /* Alert.swift in Sources */,
+				810385752498F69000396F0F /* WebViewController.swift in Sources */,
 				8103620A249123B70018D1F9 /* Repositories.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

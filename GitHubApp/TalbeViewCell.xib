@@ -23,8 +23,8 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S5Q-xb-2Kp">
-                        <rect key="frame" x="610" y="20" width="42" height="10"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                        <rect key="frame" x="563" y="12" width="89" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -53,9 +53,9 @@
                     <constraint firstItem="XGg-ss-21e" firstAttribute="leading" secondItem="WrC-bl-bR0" secondAttribute="leading" constant="20" id="CD8-gV-uZv"/>
                     <constraint firstItem="ZYa-Ns-c8x" firstAttribute="leading" secondItem="XGg-ss-21e" secondAttribute="leading" id="Dlr-hH-r8H"/>
                     <constraint firstAttribute="trailingMargin" secondItem="02t-V8-jGQ" secondAttribute="trailing" constant="20" id="Dwa-fP-5bP"/>
-                    <constraint firstItem="S5Q-xb-2Kp" firstAttribute="width" secondItem="02t-V8-jGQ" secondAttribute="width" multiplier="0.84" id="la0-7L-j3f"/>
+                    <constraint firstItem="S5Q-xb-2Kp" firstAttribute="width" secondItem="02t-V8-jGQ" secondAttribute="width" multiplier="0.84" constant="47" id="la0-7L-j3f"/>
                     <constraint firstItem="ZYa-Ns-c8x" firstAttribute="top" secondItem="XGg-ss-21e" secondAttribute="bottom" constant="5" id="m4m-8x-hM2"/>
-                    <constraint firstItem="S5Q-xb-2Kp" firstAttribute="centerX" secondItem="02t-V8-jGQ" secondAttribute="centerX" id="osK-Df-bF7"/>
+                    <constraint firstItem="S5Q-xb-2Kp" firstAttribute="centerX" secondItem="02t-V8-jGQ" secondAttribute="centerX" constant="-23.5" id="osK-Df-bF7"/>
                     <constraint firstItem="XGg-ss-21e" firstAttribute="top" secondItem="WrC-bl-bR0" secondAttribute="top" constant="2" id="p6i-n2-0bl"/>
                     <constraint firstItem="02t-V8-jGQ" firstAttribute="centerY" secondItem="WrC-bl-bR0" secondAttribute="centerY" id="zgs-QO-Pi5"/>
                 </constraints>

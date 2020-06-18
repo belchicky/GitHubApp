@@ -1,5 +1,5 @@
 //
-//  Search.swift
+//  SearchMethod.swift
 //  GitHubApp
 //
 //  Created by Konstantins Belcickis on 14/06/2020.
@@ -8,7 +8,6 @@
 
 import Foundation
 import UIKit
-
 
 extension SearchViewController {
     
@@ -22,7 +21,7 @@ extension SearchViewController {
         if segment.selectedSegmentIndex == 1 {
             filter = "desc"
         }
-        
+        	
         urlComponents.queryItems = [
             URLQueryItem(name: "q", value:  repName.text! + "+language:" + language.text!),
             URLQueryItem(name: "sort", value: "stars"),
@@ -83,4 +82,5 @@ extension SearchViewController {
         })
         task.resume()
     }
+   
 }

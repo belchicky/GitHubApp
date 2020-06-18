@@ -25,7 +25,6 @@ import UIKit
                 return nil
             }
             self.name = name
-            print("name: " ,name)
             
             let description = jsonItem["description"] as? String
             self.description = description
@@ -33,25 +32,21 @@ import UIKit
             guard let owner = jsonItem["owner"] as? Dictionary<String, Any> else {
                 return nil
             }
-            print("owner: ", owner)
+            
             guard let avatarURL = owner["avatar_url"] as? String else {
                 return nil
             }
-            
             self.avatarURL = URL(string: avatarURL)
-            print("avatarURL: " ,avatarURL)
             
             guard let ownnerName = owner["login"] as? String else {
                 return nil
             }
             self.ownnerName = ownnerName
-            print("ownnerName: ",ownnerName)
             
             guard let url = owner["html_url"] as? String else {
                 return nil
             }
             self.repositoryURL = url
-            print("html_url: ", url)
         }
     }
     
